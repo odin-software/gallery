@@ -1,0 +1,36 @@
+:root {
+  --primary-color: #DDE61F; /* Golden Glow */
+  --secundary-color: #1A5632; /* Nordic Pine */
+  --tertiary-color: #0F1822; /* Digital Slate */
+  --quartary-color: #D6D7D5; /* Nordic Mist */
+}
+
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/Archivo-Regular.ttf);
+}
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../fonts/Archivo-Medium.ttf);
+}
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../fonts/Archivo-Semibold.ttf);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--tertiary-color);
+  font-family: 'Archivo', monospace;
+}
