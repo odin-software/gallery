@@ -27,5 +27,26 @@ func main() {
 		}
 	})
 
+	mux.HandleFunc("GET /{sketch}", func(w http.ResponseWriter, r *http.Request) {
+		name := r.PathValue("sketch")
+		files, ok := Sks[name]
+		if !ok {
+			w.WriteHeader(http.StatusNotFound)
+			return
+		}
+		temp, err := template.ParseFiles("views/layout.html", "views/sketch.html")
+		if err != nil {
+			log.Println(err)
+			w.WriteHeader(http.StatusInternalServerError)
+			return
+		}
+		err = temp.ExecuteTemplate(w, "layout", files)
+		if err != nil {
+			log.Println(err)
+			w.WriteHeader(http.StatusInternalServerError)
+			return
+		}
+	})
+
 	http.ListenAndServe(":9110", mux)
 }
