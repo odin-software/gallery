@@ -1,7 +1,8 @@
-{{ define "head" }} {{ range . }}
-<script type="text/javascript" src="/static/js/{{.}}"></script>
-{{ end }}
+{{ define "head" }}
+<script src="/static/libraries/p5.min.js"></script>
 <link href="/static/css/sketch.css" rel="stylesheet" />
-{{ end }} {{ define "body" }}
+{{ range . }}
+<script type="module" src="/static/js/{{.}}"></script>
+{{ end }} {{ end }} {{ define "body" }}
 <h2>hello</h2>
 {{ end }}

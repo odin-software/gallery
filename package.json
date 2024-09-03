@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "p5": "^1.10.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/p5": "^1.7.6",
+    "tslib": "^2.7.0",
+    "typescript": "^5.5.4"
+  }
+}

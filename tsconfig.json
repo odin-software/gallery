@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "lib": ["ES6", "DOM"],
+    "noImplicitAny": true,
+    "removeComments": true,
+    "outDir": "static/js",
+    "rootDir": "src"
+  },
+  "include": ["src/**/*"]
+}
