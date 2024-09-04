@@ -29,7 +29,7 @@ func main() {
 
 	mux.HandleFunc("GET /{sketch}", func(w http.ResponseWriter, r *http.Request) {
 		name := r.PathValue("sketch")
-		files, ok := Sks[name]
+		data, ok := Sks[name]
 		if !ok {
 			w.WriteHeader(http.StatusNotFound)
 			return
@@ -40,7 +40,7 @@ func main() {
 			w.WriteHeader(http.StatusInternalServerError)
 			return
 		}
-		err = temp.ExecuteTemplate(w, "layout", files)
+		err = temp.ExecuteTemplate(w, "layout", data)
 		if err != nil {
 			log.Println(err)
 			w.WriteHeader(http.StatusInternalServerError)

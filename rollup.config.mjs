@@ -9,9 +9,9 @@ const configs = sketchs.map((sketch) => ({
   input: `src/${sketch}/${sketch}.ts`,
   output: {
     file: `static/js/${sketch}/bundle.min.js`,
-    format: "iife",
+    format: "cjs",
     name: `${sketch}`,
-    plugins: [terser()],
+    // plugins: [terser()],
     extend: true,
   },
   plugins: [commonjs(), typescript(), nodeResolve()],

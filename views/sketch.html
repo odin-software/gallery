@@ -1,8 +1,8 @@
 {{ define "head" }}
-<script src="/static/libraries/p5.min.js"></script>
 <link href="/static/css/sketch.css" rel="stylesheet" />
-{{ range . }}
+{{ range .Files }}
 <script type="module" src="/static/js/{{.}}"></script>
 {{ end }} {{ end }} {{ define "body" }}
-<h2>hello</h2>
+<h2>{{ .Title }}</h2>
+<h4>{{ .Description }}</h4>
 {{ end }}

@@ -1,3 +1,8 @@
-h2 {
+h2,
+h4 {
   color: var(--primary-color);
+}
+
+h2 {
+  margin: 0.5rem 0;
 }
