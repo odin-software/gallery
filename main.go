@@ -48,5 +48,7 @@ func main() {
 		}
 	})
 
+	log.Println("Listening on :9110")
+
 	http.ListenAndServe(":9110", mux)
 }
